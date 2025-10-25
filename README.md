@@ -4,6 +4,8 @@ Aplikasi web interaktif untuk menampilkan **informasi cuaca terkini**, **koordin
 Dibangun menggunakan **Node.js**, **Express**, dan **Handlebars (HBS)** dengan data dari **Mapbox**, **Weatherstack**, dan **Mediastack API**.  
 Website ini dibuat dalam rangka **pemenuhan Ujian Tengah Semester (UTS) Praktikum Pemrograman Jaringan** di **Universitas Negeri Padang**.
 
+Live Demo: https://website-cek-cuaca.vercel.app/
+
 ---
 
 ## 【 🚀 Fitur Utama 】
