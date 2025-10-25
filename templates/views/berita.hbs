@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+  {{> head}}
+  <body>
+    {{> header}}
+
+    <div class="container">
+      <h1 class="faq-title">Berita Cuaca</h1>
+
+      {{#if berita.length}}
+        <div class="news-list">
+          {{#each berita}}
+            <div class="news-card">
+              <div class="news-image">
+                {{#if image}}
+                  <img src="{{image}}" alt="{{title}}" />
+                {{else}}
+                  <div class="news-placeholder">📰</div>
+                {{/if}}
+              </div>
+
+              <div class="news-content">
+                <a href="{{url}}" target="_blank" class="news-title">{{title}}</a>
+                <p class="news-description">{{description}}</p>
+                <p class="news-meta">
+                  <span class="news-author">
+                    {{#if author}}{{author}}{{else}}Unknown Author{{/if}}
+                  </span>
+                  &nbsp;via {{source}}<br>
+                  <span class="news-date">{{published_at}}</span>
+                </p>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      {{else}}
+        <div class="empty-state">
+          <div class="empty-state-icon">📰</div>
+          <div class="empty-state-text">Tidak ada berita ditemukan</div>
+        </div>
+      {{/if}}
+    </div>
+
+    {{> footer}}
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+  {{> head}}
+  <body>
+    {{> header}}
+
+    <div class="container">
+      <div class="error-container">
+        <div class="error-icon">🔍</div>
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Halaman Tidak Ditemukan</h2>
+        <p class="error-description">
+          Maaf, halaman yang Anda cari tidak ada atau telah dipindahkan. 
+          Silakan kembali ke halaman utama atau gunakan navigasi di atas.
+        </p>
+
+        <div class="error-actions">
+          <a href="/" class="error-btn error-btn-primary">Kembali ke Home</a>
+          <button class="error-btn error-btn-secondary" onclick="history.back()">Kembali</button>
+        </div>
+
+        <div class="error-suggestions">
+          <h3>Saran untuk Anda:</h3>
+          <ul>
+            <li>Periksa kembali URL yang Anda masukkan</li>
+            <li>Gunakan menu navigasi di atas untuk menjelajahi aplikasi</li>
+            <li>Kembali ke halaman Home dan coba lagi</li>
+            <li>Hubungi kami jika masalah terus berlanjut</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    {{> footer}}
+  </body>
+</html>

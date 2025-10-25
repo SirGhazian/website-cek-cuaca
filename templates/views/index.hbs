@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+  {{> head}}
+  <body>
+    {{> header}}
+
+    <div class="container">
+      <div class="search-section">
+        <h1>Cek Cuaca</h1>
+        <div class="search-box">
+          <input 
+            type="text" 
+            id="locationInput" 
+            placeholder="Masukkan nama kota (contoh: Padang, Bandung, Surabaya...)"
+          >
+          <button id="searchBtn" type="button">Cari</button>
+        </div>
+        <p class="search-tip">💡 Gunakan nama kota untuk hasil terbaik</p>
+      </div>
+
+      <div id="weatherContainer" class="weather-grid">
+        <div class="empty-state">
+          <div class="empty-state-icon">🔍</div>
+          <div class="empty-state-text">Cari lokasi untuk melihat informasi cuaca</div>
+        </div>
+      </div>
+    </div>
+
+    {{> footer}}
+    <script src="/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+  {{> head}}
+  <body>
+    {{> header}}
+
+    <div class="container">
+      <h1 class="faq-title">Frequently Asked Questions (FAQ)</h1>
+
+      <div class="faq-section">
+
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Halaman ini digunakan untuk apa?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Halaman ini digunakan untuk membantu pengguna memahami fungsi dan fitur dari website <strong>Cek Cuaca</strong>.  
+              Website ini menyediakan informasi cuaca terkini berdasarkan lokasi yang dicari pengguna, serta menampilkan berita terbaru terkait cuaca dan iklim.  
+              Pengguna dapat mengecek suhu, kelembaban, arah angin, serta membaca berita cuaca di seluruh dunia melalui menu yang tersedia.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Apa itu API?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              API (<strong>Application Programming Interface</strong>) adalah antarmuka yang memungkinkan dua sistem atau aplikasi saling berkomunikasi.  
+              API mengatur bagaimana permintaan (request) dikirim dan bagaimana hasil (response) diterima antar sistem menggunakan protokol tertentu, biasanya HTTP.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>API apa yang digunakan dalam aplikasi ini?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Aplikasi ini menggunakan tiga API eksternal berbasis <strong>RESTful</strong>:
+              <ul>
+                <li><strong>Mapbox API</strong> – untuk mengubah nama lokasi menjadi koordinat geografis (geocoding).</li>
+                <li><strong>Weatherstack API</strong> – untuk menampilkan informasi cuaca terkini berdasarkan koordinat yang didapat dari Mapbox.</li>
+                <li><strong>Mediastack API</strong> – untuk menampilkan berita terkini yang berhubungan dengan cuaca dan iklim pada halaman Berita.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Salah satu pola arsitektur API adalah RESTful</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Pola arsitektur <strong>RESTful</strong> (Representational State Transfer) adalah metode komunikasi antara klien dan server menggunakan protokol HTTP.  
+              REST menggunakan metode seperti <strong>GET</strong>, <strong>POST</strong>, <strong>PUT</strong>, dan <strong>DELETE</strong> untuk mengakses dan mengubah data.  
+              Data biasanya dikirim dan diterima dalam format <strong>JSON</strong>.
+
+              <div style="text-align:center; margin: 2rem 0;">
+                <img src="/img/diagramAPI.png" alt="Diagram RESTful API" style="max-width:100%; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+              </div>
+
+              <p style="text-align:center; color: var(--text-secondary);">
+                Diagram di atas menunjukkan bagaimana klien mengirim permintaan ke server melalui endpoint RESTful,  
+                kemudian server memproses permintaan tersebut dan mengembalikan respons dalam format JSON.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    {{> footer}}
+    <script src="/js/app.js"></script>
+  </body>
+</html>
